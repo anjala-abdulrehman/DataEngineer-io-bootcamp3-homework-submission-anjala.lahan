@@ -1,5 +1,5 @@
-# Actors Table DDL (query_1)
-# Create a DDL for the actors table
+-- Actors Table DDL (query_1)
+-- Create a DDL for the actors table
   
 CREATE TABLE 
     anjala.actors ( 
