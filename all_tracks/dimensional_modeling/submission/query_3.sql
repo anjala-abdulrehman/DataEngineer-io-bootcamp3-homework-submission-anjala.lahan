@@ -13,4 +13,4 @@ CREATE TABLE anjala.actors_history_scd
   )
 WITH (
   format = 'PARQUET',
-  partitioning = ARRAY['start_date'] )
+  partitioning = ARRAY['current_year'] )
