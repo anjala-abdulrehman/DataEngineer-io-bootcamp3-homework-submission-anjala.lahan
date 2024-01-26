@@ -18,7 +18,7 @@ WITH
         WHEN AVG(rating) >  6 THEN 'average'
         ELSE 'bad'
       END  AS quality_class,
-      True AS is_active, -- data for this year is always present, so for this year is_active is  True
+      True AS is_active, 
       YEAR AS current_year
     FROM
       bootcamp.actor_films
@@ -41,7 +41,7 @@ WITH
         WHEN ty.is_active AND ly.is_active IS NULL THEN ty.films
       END AS films,
       CASE
-        WHEN ly.is_active AND ty.is_active is NULL then false
+        WHEN ty.is_active is NULL then false
         WHEN ty.current_year IS NOT NULL then true
       END as is_active,
       ty.current_year
